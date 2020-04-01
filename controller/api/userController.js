@@ -1,5 +1,5 @@
-const userService = require('../service/userService');
-const constants = require('../constants');
+const userService = require('../../service/userService');
+const constants = require('../../constants');
 
 
 module.exports.signup = async (req, res) => {
