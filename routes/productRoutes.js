@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const productController = require('../controller/productController');
+const productController = require('../controller/api/productController');
 const joiSchemaValidation = require('../middleware/joiSchemaValidation')
 const productSchema = require('../apiSchema/productSchema');
 const tokenValidation = require('../middleware/tokenValidation');

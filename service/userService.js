@@ -4,7 +4,6 @@ const bcrypt = require('bcrypt');
 const { formatMongoData } = require('../helper/dbHelper');
 const jwt = require('jsonwebtoken');
 
-
 module.exports.signup = async ({ email, password }) => {
   try {
     const user = await User.findOne({ email });
