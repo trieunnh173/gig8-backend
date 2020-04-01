@@ -1,53 +1,68 @@
 const express = require('express');
+const next = require("next");
 const dotEnv = require('dotenv');
 const cors = require('cors');
 const dbConnection = require('./database/connection');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const swaggerDocument = YAML.load('./swagger.yaml');
+const dev = process.env.NODE_ENV !== "production";
+const app = next({
+  dev,
+  dir: './views'
+});
+const handle = app.getRequestHandler();
 
 dotEnv.config();
+app
+  .prepare()
+  .then(() => {
+    const server = express();
+    const pageRoutes = require('./routes/pageRoutes');
+    //db connectivity
+    dbConnection();
 
-const app = express();
+    //cors
+    server.use(cors());
 
-//db connectivity
-dbConnection();
+    //request payload middleware
+    server.use(express.json());
 
-//cors
-app.use(cors());
+    server.use(express.urlencoded({
+      extended: true
+    }));
 
-//request payload middleware
-app.use(express.json());
+    //Api routes
+    server.use('/api/v1/product', require('./routes/productRoutes'));
+    server.use('/api/v1/user', require('./routes/userRoutes'));
 
-app.use(express.urlencoded({
-  extended: true
-}));
+    // API Documents
+    if (process.env.NODE_ENV != 'production') {
+      server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+    }
 
-app.use('/api/v1/product', require('./routes/productRoutes'));
-app.use('/api/v1/user', require('./routes/userRoutes'));
+    server.use('/', pageRoutes(app));
 
-// API Documents
-if(process.env.NODE_ENV != 'production') {
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-}
-//app.use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+    server.all('*', (req, res) => {
+      return handle(req, res)
+    })
 
-app.get('/', (req, res, next)=> {
-  res.send('Hello from Node.js Demo Nodemon')
-})
+    const PORT = process.env.PORT || 3000;
 
-const PORT = process.env.PORT || 3000;
+    server.listen(PORT, () => {
+      console.log(`Server listening on port ${PORT}`);
+    })
 
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-})
-
-// error handle middlaware
-app.use(function (err, req, res, next) {
-  console.error(err.stack)
-  res.status(500).send({
-    status: 500,
-    message: err.message,
-    body: {}
-  })
-})
+    // error handle middlaware
+    server.use(function (err, req, res, next) {
+      console.error(err.stack)
+      res.status(500).send({
+        status: 500,
+        message: err.message,
+        body: {}
+      })
+    })
+  }).catch(ex => {
+    console.error(ex.stack);
+    process.exit(1);
+  });
