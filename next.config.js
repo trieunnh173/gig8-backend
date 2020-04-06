@@ -1,5 +1,6 @@
 const path = require("path");
 const glob = require("glob");
+const webpack = require('webpack')
 
 module.exports = {
   webpack: (config, { dev }) => {
@@ -38,4 +39,14 @@ module.exports = {
 };
 
 const withSass = require("@zeit/next-sass");
-module.exports = withSass();
+const withCss = require("@zeit/next-css");
+const withFonts = require('next-fonts');
+const withImages = require('next-images');
+module.exports = withFonts(withImages(withCss(withSass({
+  enableSvg: true,
+  webpack(config, options) {
+    return config;
+  }
+}
+))));
+

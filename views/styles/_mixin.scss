@@ -1,0 +1,22 @@
+@import "./variable";
+
+@font-face {
+  font-family: "Proxima Nova Soft";
+  src: url("/assets/fonts/ProximaNovaMedium.ttf");
+}
+@font-face {
+  font-family: "Proxima Nova Soft";
+  src: url("/assets/fonts/ProximaNovaBold.ttf");
+  font-weight: $font-weight-bold;
+}
+@font-face {
+  font-family: "Proxima Nova Soft";
+  src: url("/assets/fonts/ProximaNovaSemibold.ttf");
+  font-weight: $font-weight-semibold;
+}
+
+@mixin wrapper {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 30px;
+}

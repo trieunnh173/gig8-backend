@@ -32,6 +32,9 @@ app
       extended: true
     }));
 
+    //assets
+    server.use('/assets', express.static(__dirname + '/views/assets'));
+
     //Api routes
     server.use('/api/v1/product', require('./routes/productRoutes'));
     server.use('/api/v1/user', require('./routes/userRoutes'));
