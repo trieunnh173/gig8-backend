@@ -1,1 +1,113 @@
+@import "./mixin";
 
+body {
+  font-family: "Proxima Nova Soft";
+  a,
+  span,
+  div,
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $secondary-color;
+  }
+  .content {
+    padding-top: 80px;
+    min-height: 100vh;
+  }
+}
+
+.btn {
+  padding: 0 !important;
+  border-radius: 22px !important;
+  &--small {
+    width: 146px !important;
+    height: 34px !important;
+    font-size: 14px !important;
+  }
+  &--short {
+    width: 124px !important;
+    height: 44px !important;
+  }
+  &--long {
+    width: 201px !important;
+    height: 44px !important;
+  }
+  &--very-long {
+    width: 288px !important;
+    height: 44px !important;
+  }
+  &--primary {
+    background-color: $primary-color !important;
+    border: 1px solid $primary-color !important;
+    color: white !important;
+    &.-outline {
+      background-color: unset !important;
+      border: 1px solid $primary-color !important;
+      color: $primary-color !important;
+      &:hover {
+        background-color: $primary-color !important;
+        border: 1px solid $primary-color !important;
+        color: white !important;
+      }
+    }
+  }
+  &--secondary {
+    background-color: $secondary-color !important;
+    border: 1px solid $secondary-color !important;
+    color: white !important;
+    &.-outline {
+      background-color: unset !important;
+      border: 1px solid $secondary-color !important;
+      color: $primary-color !important;
+      &:hover {
+        background-color: $secondary-color !important;
+        border: 1px solid $secondary-color !important;
+        color: white !important;
+      }
+    }
+  }
+  &--primary:focus {
+    box-shadow: 0 5px 20px 0 rgba(61, 169, 252, 0.5) !important;
+  }
+  &--secondary:focus {
+    box-shadow: 0 5px 20px 0 rgba(9, 64, 103, 0.25) !important;
+  }
+}
+
+.form-control {
+  height: 44px !important;
+  border-radius: 22px !important;
+  border: solid 1px #e0e0e0 !important;
+  background-color: #ffffff !important;
+  padding: 0 30px !important;
+}
+
+.search-input {
+  position: relative;
+  &__icon {
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    left: 20px;
+    position: absolute;
+    &.-search {
+      background-image: url("/assets/icons/search.png");
+    }
+  }
+  &__input {
+    padding-left: 50px !important;
+  }
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  &.-pro {
+    color: #3da9fc !important;
+  }
+}
+
+.link:hover {
+  color: #5dbdf9 !important;
+}
