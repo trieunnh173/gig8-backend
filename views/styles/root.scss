@@ -1,7 +1,7 @@
 @import "./mixin";
 
 body {
-  font-family: "Proxima Nova Soft";
+  font-family: "Proxima Nova";
   a,
   span,
   div,
@@ -76,11 +76,11 @@ body {
 }
 
 .form-control {
-  height: 44px !important;
-  border-radius: 22px !important;
-  border: solid 1px #e0e0e0 !important;
-  background-color: #ffffff !important;
-  padding: 0 30px !important;
+  height: 44px;
+  border-radius: 22px;
+  border: solid 1px #e0e0e0;
+  background-color: #ffffff;
+  padding: 0 30px;
 }
 
 .search-input {
@@ -104,10 +104,40 @@ body {
   text-decoration: none;
   cursor: pointer;
   &.-pro {
-    color: #3da9fc !important;
+    color: #3da9fc;
   }
 }
-
 .link:hover {
   color: #5dbdf9 !important;
+}
+
+.slick-slider {
+  .slick-prev {
+    transform: rotate(180deg);
+  }
+  .slick-arrow {
+    background-color: #fff;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 0;
+    right: -17px;
+    border-radius: 50%;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: url("/assets/icons/right-arrow.png") no-repeat;
+      background-size: 20px 20px;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+    }
+  }
 }

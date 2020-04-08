@@ -1,17 +1,22 @@
 @import "./variable";
 
 @font-face {
-  font-family: "Proxima Nova Soft";
-  src: url("/assets/fonts/ProximaNovaMedium.ttf");
+  font-family: "Proxima Nova";
+  src: url("/assets/fonts/ProximaNovaRegular.otf");
 }
 @font-face {
-  font-family: "Proxima Nova Soft";
-  src: url("/assets/fonts/ProximaNovaBold.ttf");
+  font-family: "Proxima Nova";
+  src: url("/assets/fonts/ProximaNovaLight.otf");
+  font-weight: $font-weight-light;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/assets/fonts/ProximaNovaBold.otf");
   font-weight: $font-weight-bold;
 }
 @font-face {
-  font-family: "Proxima Nova Soft";
-  src: url("/assets/fonts/ProximaNovaSemibold.ttf");
+  font-family: "Proxima Nova";
+  src: url("/assets/fonts/ProximaNovaSemiBold.otf");
   font-weight: $font-weight-semibold;
 }
 

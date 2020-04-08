@@ -121,7 +121,7 @@ export default class SideBar extends Component {
             <li className="sidebar__list__item">
               Sign in
             </li>
-            <li className="sidebar__list__item" id="categories" onClick={() => { this.scrollCaret("categories") }}>
+            <li className="sidebar__list__item" id="categories" onClick={() => { this.scrollCaret("categories") }} onPointerDown={() => { this.scrollCaret("categories") }}>
               <div>
                 <label>Explorer Category <img src={caret} className="sidebar__list__item__caret"></img></label>
               </div>
@@ -131,7 +131,7 @@ export default class SideBar extends Component {
                 {categories.map((c, index) => {
                   return (
                     <>
-                      <li key={index} className="sidebar__list__sub__item" id={`subitem_${c.id}`} onClick={() => { this.scrollCaret(`subitem_${c.id}`) }}>
+                      <li key={index} className="sidebar__list__sub__item" id={`subitem_${c.id}`} onClick={() => { this.scrollCaret(`subitem_${c.id}`) }} onPointerDown={() => { this.scrollCaret(`subitem_${c.id}`) }}>
                         <label>{c.name} <img src={caret} className="sidebar__list__item__caret"></img></label>
                       </li>
                       <UncontrolledCollapse toggler={`#subitem_${c.id}`}>

@@ -1,0 +1,47 @@
+@import "../../styles/variable";
+
+.video-reviwer-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  @media (max-width: $mobile-max-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__thumbnail {
+    position: relative;
+
+    &__image {
+      width: 100%;
+      background: white;
+    }
+    &__play {
+      position: absolute;
+      width: 111px;
+      height: 100px;
+      left: calc(50% - 55px);
+      top: calc(50% - 50px);
+      cursor: pointer;
+    }
+  }
+  &__description {
+    @media (max-width: $mobile-max-width) {
+      margin-top: 20px;
+    }
+
+    &__content {
+      font-style: italic;
+      font-size: 18px;
+      font-weight: $font-weight-light;
+    }
+    &__signature {
+      font-size: 20px;
+      margin-top: 20px;
+
+      span {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
