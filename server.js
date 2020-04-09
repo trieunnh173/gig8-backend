@@ -38,6 +38,7 @@ app
     //Api routes
     server.use('/api/v1/product', require('./routes/productRoutes'));
     server.use('/api/v1/user', require('./routes/userRoutes'));
+    server.use('/api/v1/category', require('./routes/categoryRoutes'));
 
     // API Documents
     if (process.env.NODE_ENV != 'production') {

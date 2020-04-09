@@ -11,6 +11,13 @@ module.exports = {
     PRODUCT_UPDATED: 'Product Update Successfully',
     PRODUCT_DELETED: 'Product Delete Successfully',
   },
+  categoryMessage: {
+    CATEGORY_CREATED: 'Category Created Successfully',
+    CATEGORY_FETCHED: 'Category Fetched Successfully',
+    CATEGORY_NOT_FOUND: 'Category Not Found',
+    CATEGORY_UPDATED: 'Category Update Successfully',
+    CATEGORY_DELETED: 'Category Delete Successfully',
+  },
   userMessage: {
     SIGNUP_SUCCESS: 'Signup Success',
     DUPLICATE_EMAIL: 'User already exist with given email',
