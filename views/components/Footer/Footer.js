@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import './Footer.scss';
-import logo from '../../assets/images/logo-dark.png';
-import facebook from '../../assets/icons/facebook.png';
-import twitter from '../../assets/icons/twitter.png';
-import whatsapp from '../../assets/icons/whatsapp.png';
-import likedin from '../../assets/icons/likedin.png';
+import logo from '../../assets/images/logo.png';
+import { iconTwitter, iconFacebook, iconLikedin, iconInstagram } from "../../utils/iconStatic";
 const categories = [
   {
     name: 'Design',
@@ -40,10 +37,10 @@ export default class Footer extends Component {
                 <img src={logo}></img>
               </div>
               <div className="footer__wrapper__top__row__social">
-                <img src={twitter}></img>
-                <img src={facebook}></img>
-                <img src={likedin}></img>
-                <img src={whatsapp}></img>
+                {iconTwitter()}
+                {iconFacebook()}
+                {iconLikedin()}
+                {iconInstagram()}
               </div>
             </div>
             <div className="footer__wrapper__top__row">

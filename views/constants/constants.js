@@ -3,6 +3,12 @@ import tutorial2 from '../assets/images/tutorial/group-9.png';
 import tutorial3 from '../assets/images/tutorial/group-10.png';
 import tutorial4 from '../assets/images/tutorial/group-12.png';
 import tutorial5 from '../assets/images/tutorial/group-11.png';
+import relatedStyle1 from '../assets/images/related/rectangle1.png';
+import relatedStyle2 from '../assets/images/related/rectangle2.png';
+import relatedStyle3 from '../assets/images/related/rectangle3.png';
+import relatedStyle4 from '../assets/images/related/rectangle4.png';
+import relatedStyle5 from '../assets/images/related/rectangle5.png';
+import relatedStyle from '../assets/images/related/rectangle.png';
 
 export const TABLET_MIN_WIDTH = 768;
 export const DESKTOP_MIN_WIDTH = 1024;
@@ -69,6 +75,33 @@ export const SETTING_CAROUSEL_INTERVIEW = {
   rows: 1,
   arrows: true,
 }
+export const SETTING_CAROUSEL_TOPIC = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  rows: 1,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: DESKTOP_MIN_WIDTH,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        rows: 1
+      }
+    },
+    {
+      breakpoint: TABLET_MIN_WIDTH,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        rows: 1
+      }
+    }
+  ]
+};
 export const TUTORIAL_STEP = [
   {
     image: tutorial1,
@@ -96,3 +129,31 @@ export const TUTORIAL_STEP = [
     description: "Completed work will be notified by email attached to the work file, if you are not satisfied with the what freelancer maked , you can still reject their work, typing your feedback and they will provide another good solution for you."
   }
 ]
+export const RELATED_STYLE = [
+  {
+    image: relatedStyle,
+    title: "3D rendering and perspective",
+  },
+  {
+    image: relatedStyle1,
+    title: "Interior design of houses and apartments",
+  },
+  {
+    image: relatedStyle2,
+    title: "Exterior design"
+  },
+  {
+    image: relatedStyle3,
+    title: "House construction design",
+  },
+  {
+    image: relatedStyle4,
+    title: "Virtual Staging",
+  },
+  {
+    image: relatedStyle5,
+    title: "Planning & Design",
+  }
+]
+
+

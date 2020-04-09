@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import rectangle from '../../assets/images/products/rectangle1.png';
+import rectangle from '../../assets/images/thumbnail.png';
 import freelancer from '../../assets/images/freelancer.jpg';
 import threedot from '../../assets/icons/threedot.png';
 import star from '../../assets/icons/star.png';

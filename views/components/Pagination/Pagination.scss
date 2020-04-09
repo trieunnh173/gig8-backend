@@ -1,0 +1,22 @@
+.gig-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  &__node {
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+    margin: 0 5px;
+
+    &:hover,
+    &.active {
+      border-radius: 50%;
+      background: #3da9fc;
+      color: white;
+    }
+  }
+}

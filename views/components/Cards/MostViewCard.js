@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './MostViewCard.scss';
-import mostCard from '../../assets/images/most-view.png';
+import mostCard from '../../assets/images/view.png';
 import freelancer from '../../assets/images/freelancer.jpg';
 export default class MostViewCard extends Component {
   render() {

@@ -1,0 +1,43 @@
+.filter-gig {
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    svg {
+      g {
+        fill: #3da9fc;
+      }
+    }
+  }
+
+  &__popup {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    left: -280px;
+    border-radius: 6px;
+    border: solid 1px #efefef;
+    background-color: #ffffff;
+    z-index: 2;
+    padding: 20px;
+
+    a {
+      padding: 8px 0;
+    }
+
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      .gig-checkbox-slide {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &:hover {
+    .filter-gig__popup {
+      display: flex;
+    }
+  }
+}

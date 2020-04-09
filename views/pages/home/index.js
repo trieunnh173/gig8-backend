@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import ProductCard from '../../components/Cards/ProductCard'
 import './home.scss';
-import { Button } from 'reactstrap';
-import character from '../../assets/images/character.png';
-import star from '../../assets/icons/star.png';
+import { Button, Input } from 'reactstrap';
 import uiDesign from '../../assets/images/categories/UIDesign.png';
 import analytics from '../../assets/images/categories/Analytics.png';
 import graphics from '../../assets/images/categories/Graphics.png';
@@ -13,6 +11,7 @@ import social from '../../assets/images/categories/Social.png';
 import video from '../../assets/images/categories/Video.png';
 import voice from '../../assets/images/categories/Voice.png';
 import yourSkill from '../../assets/images/yourskill.png';
+import backgroundHeader from '../../assets/images/background-header.png'
 import Slider from "react-slick";
 import { SETTING_CAROUSEL_PRODUCTS, SETTING_CAROUSEL_MOST_VIEW, TUTORIAL_STEP, SETTING_CAROUSEL_INTERVIEW } from '../../constants/constants';
 import MostViewCard from '../../components/Cards/MostViewCard';
@@ -24,32 +23,25 @@ export default class Home extends Component {
     return (
       <div className="content home-page">
         <div className="home-page__header">
+          <Slider arrows={false} autoplay={true} speed={1000} autoplaySpeed={5000}>
+            <img className="home-page__header__image-slider" src={backgroundHeader}></img>
+            <img className="home-page__header__image-slider" src={backgroundHeader}></img>
+            <img className="home-page__header__image-slider" src={backgroundHeader}></img>
+            <img className="home-page__header__image-slider" src={backgroundHeader}></img>
+          </Slider>
           <div className="home-page__header__content">
             <div className="home-page__header__content__title">
-              Grow your bussines with our Talented <span>Freelancer.</span>
+              Grow your bussines with our Freelancer, <span>Join now!</span>
             </div>
             <div className="home-page__header__content__description">
               Easy to hire and Fast delivery work.
             </div>
-            <div className="home-page__header__content__button">
-              <Button className="btn--short btn--primary">
-                Join now
-              </Button>
+            <div className="home-page__header__content__search search-input">
+              <div className="search-input__icon -search"></div>
+              <Input className="search-input__input"></Input>
             </div>
-          </div>
-          <div className="home-page__header__character">
-            <img src={character}></img>
-            <div className="home-page__header__character__content">
-              <div className="home-page__header__character__content__name">
-                Pichaya Utharntharm, <b>Designer UX/UI </b>
-              </div>
-              <div className="home-page__header__character__content__star">
-                <img src={star}></img>
-                <img src={star}></img>
-                <img src={star}></img>
-                <img src={star}></img>
-                <img src={star}></img>
-              </div>
+            <div className="home-page__header__content__suggestion">
+              Trending Keyword: Web developer, Banner Design, Architect, Logo Design, Flyer…
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './SideBar.scss';
-import $ from 'jquery';
 import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import caret from '../../assets/icons/caret.png';
 const categories = [
@@ -95,22 +94,20 @@ export default class SideBar extends Component {
     super(props);
   }
 
-  hideSideBar = () => {
-    $('#sidebar').removeClass('active');
-    $('#sidebar-overlay').removeClass('active');
-  }
-
   scrollCaret = (id) => {
-    if ($(`#${id} .sidebar__list__item__caret`).hasClass("active")) {
-      $(`#${id} .sidebar__list__item__caret`).removeClass("active");
+    let ref = this.refs[id];
+    if (ref.classList.contains("active")) {
+      ref.classList.remove('active')
     } else {
-      $(`#${id} .sidebar__list__item__caret`).addClass("active");
+      ref.classList.add('active')
     }
   }
+
   render() {
+    const { isShowSideBar, showSideBar } = this.props;
     return (
       <>
-        <nav className="sidebar" id="sidebar">
+        <nav className={`sidebar ${isShowSideBar ? 'active' : ''}`} id="sidebar">
           <ul className="sidebar__list">
             <li className="sidebar__list__item">
               Become a Seller
@@ -121,9 +118,9 @@ export default class SideBar extends Component {
             <li className="sidebar__list__item">
               Sign in
             </li>
-            <li className="sidebar__list__item" id="categories" onClick={() => { this.scrollCaret("categories") }} onPointerDown={() => { this.scrollCaret("categories") }}>
+            <li className="sidebar__list__item" id="categories" onPointerDown={() => { this.scrollCaret("categories") }}>
               <div>
-                <label>Explorer Category <img src={caret} className="sidebar__list__item__caret"></img></label>
+                <label>Explorer Category <img ref="categories" src={caret} className="sidebar__list__item__caret"></img></label>
               </div>
             </li>
             <UncontrolledCollapse toggler="#categories">
@@ -131,8 +128,8 @@ export default class SideBar extends Component {
                 {categories.map((c, index) => {
                   return (
                     <>
-                      <li key={index} className="sidebar__list__sub__item" id={`subitem_${c.id}`} onClick={() => { this.scrollCaret(`subitem_${c.id}`) }} onPointerDown={() => { this.scrollCaret(`subitem_${c.id}`) }}>
-                        <label>{c.name} <img src={caret} className="sidebar__list__item__caret"></img></label>
+                      <li key={index} className="sidebar__list__sub__item" id={`subitem_${c.id}`} onPointerDown={() => { this.scrollCaret(`subitem_${c.id}`) }}>
+                        <label>{c.name} <img src={caret} ref={`subitem_${c.id}`} className="sidebar__list__item__caret"></img></label>
                       </li>
                       <UncontrolledCollapse toggler={`#subitem_${c.id}`}>
                         <ul>
@@ -157,7 +154,7 @@ export default class SideBar extends Component {
             </li>
           </ul>
         </nav>
-        <div className="sidebar-overlay" id="sidebar-overlay" onClick={() => { this.hideSideBar() }}></div>
+        <div className={`sidebar-overlay ${isShowSideBar ? 'active' : ''}`} onClick={() => { showSideBar(false) }}></div>
       </>
     )
   }
