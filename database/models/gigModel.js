@@ -1,12 +1,15 @@
 const mongoose = require ('mongoose');
 
-const categorySchema = new mongoose.Schema({
+const gigSchema = new mongoose.Schema({
   name: String,
-  icon: String,
-  parent_id: Number,
-  is_new: Number,
+  image: String,
+  describe: String,
+  description: String,
   is_status: Number,
-  is_order: Number
+  user_id: Number,
+  is_save: Number,
+  price: String,
+  popular_id: Number
 
 }, {
     timestamps: true,
@@ -21,4 +24,4 @@ const categorySchema = new mongoose.Schema({
   }
 );
 
-module.exports = mongoose.model('Category', categorySchema);
+module.exports = mongoose.model('Gig', gigSchema);

@@ -1,13 +1,10 @@
 const mongoose = require ('mongoose');
 
-const categorySchema = new mongoose.Schema({
-  name: String,
-  icon: String,
-  parent_id: Number,
-  is_new: Number,
-  is_status: Number,
-  is_order: Number
-
+const popularSchema = new mongoose.Schema({
+  sub_title: String,
+  title: String,
+  images: String 
+  
 }, {
     timestamps: true,
     toObject: {
@@ -21,4 +18,4 @@ const categorySchema = new mongoose.Schema({
   }
 );
 
-module.exports = mongoose.model('Category', categorySchema);
+module.exports = mongoose.model('Category', popularSchema);
