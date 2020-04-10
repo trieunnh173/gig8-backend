@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>likedin-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Style-Guide-Copy" transform="translate(-723.000000, -3930.000000)" fill="#5F6C7B" fill-rule="nonzero">
+            <g id="likedin-icon" transform="translate(723.500000, 3930.000000)">
+                <g id="linkedin-icon">
+                    <g transform="translate(4.000000, 4.000000)">
+                        <path d="M16.99575,17 L17,10.7645417 C17,7.71445833 16.343375,5.36491667 12.777625,5.36491667 C11.0634583,5.36491667 9.913125,6.30558333 9.4435,7.197375 L9.39391667,7.197375 L9.39391667,5.64966667 L6.01304167,5.64966667 L6.01304167,16.9992917 L9.53345833,16.9992917 L9.53345833,11.379375 C9.53345833,9.89966667 9.81395833,8.46883333 11.6464167,8.46883333 C13.4519583,8.46883333 13.478875,10.1575 13.478875,11.4742917 L13.478875,17 L16.99575,17 Z" id="Path"></path>
+                        <polygon id="Path" points="0.2805 5.650375 3.80516667 5.650375 3.80516667 17 0.2805 17"></polygon>
+                        <path d="M2.04141667,0 C0.914458333,0 0,0.914458333 0,2.04141667 C0,3.168375 0.914458333,4.10195833 2.04141667,4.10195833 C3.168375,4.10195833 4.08283333,3.168375 4.08283333,2.04141667 C4.082125,0.914458333 3.16766667,0 2.04141667,0 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -19,18 +19,30 @@
     width: 100%;
     height: 600px;
     position: relative;
-    background-image: url("/assets/images/top-page-header.png");
+    overflow: hidden;
     @media (max-width: $mobile-max-width) {
       height: unset;
       background-image: unset;
       padding: 0 30px;
+      @media (max-width: $mobile-max-width) {
+        padding: 0 10px;
+      }
     }
 
+    .slick-slider {
+      height: 600px;
+      @media (max-width: $mobile-max-width) {
+        display: none;
+      }
+    }
+    &__image-slider {
+      height: 600px;
+    }
     &__content {
       position: absolute;
-      left: 100px;
-      top: 100px;
-      max-width: 480px;
+      top: 150px;
+      width: 600px;
+      left: calc(50% - 300px);
       @media (max-width: $mobile-max-width) {
         position: unset;
         max-width: unset;
@@ -40,42 +52,60 @@
       &__title {
         font-size: 34px;
         font-weight: $font-weight-bold;
-
+        color: white;
+        @media (max-width: $mobile-max-width) {
+          color: $secondary-color;
+        }
         span {
           color: #3da9fc;
+          cursor: pointer;
         }
       }
       &__description {
+        color: white;
         margin-top: 20px;
+        @media (max-width: $mobile-max-width) {
+          color: $secondary-color;
+        }
       }
-      &__button {
-        margin-top: 20px;
+      &__suggestion {
+        margin-top: 10px;
+        color: white;
+        @media (max-width: $mobile-max-width) {
+          color: $secondary-color;
+        }
       }
-    }
-    &__character {
-      position: absolute;
-      right: 100px;
-      bottom: 0;
-      @media (max-width: $mobile-max-width) {
-        display: none;
-      }
+      &__search {
+        margin-top: 25px;
+        input {
+          height: 60px;
+          border-radius: 30px;
+          border: none;
+          @media (max-width: $mobile-max-width) {
+            border: solid 1px #efefef;
+          }
 
-      img {
-        max-height: 400px;
-        max-width: 300px;
-      }
-      &__content {
-        &__star {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          img {
-            width: 14px;
-            height: 14px;
-            margin-right: 10px;
+          &:focus {
+            border: none;
           }
         }
+        .search-input__icon {
+          width: 20px;
+          height: 20px;
+          top: 20px;
+          &.-search {
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+    &__characters {
+      position: absolute;
+      right: 300px;
+      bottom: 450px;
+      @media (max-width: $mobile-max-width) {
+        display: none;
       }
     }
   }
@@ -224,6 +254,9 @@
     @media (max-width: $mobile-max-width) {
       background-image: unset;
       padding: 0 30px;
+      @media (max-width: $mobile-max-width) {
+        padding: 0 10px;
+      }
     }
 
     &__content {

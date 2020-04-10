@@ -1,0 +1,129 @@
+@import "../../styles/variable";
+@import "../../styles/mixin";
+
+.category-detail-page {
+  &__title {
+    font-size: 28px;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 20px;
+  }
+  &__content {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $mobile-max-width) {
+      padding-top: 0px;
+    }
+
+    &__title {
+      text-align: center;
+      font-weight: $font-weight-bold;
+      font-size: 30px;
+      padding: 0 10px;
+
+      span {
+        font-weight: $font-weight-normal;
+        font-size: 16px;
+      }
+    }
+    &__related-topic {
+      @include wrapper;
+      margin-top: 50px;
+    }
+    &__related-style {
+      @include wrapper;
+      margin-top: 50px;
+
+      &__cards {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 8px;
+
+        @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: auto;
+        }
+        @media (max-width: $mobile-max-width) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: auto;
+        }
+      }
+      &__card {
+        &__img {
+          width: 100%;
+          border-radius: 6px;
+        }
+        &__description {
+          text-align: center;
+          padding: 10px;
+          font-weight: $font-weight-semibold;
+        }
+      }
+    }
+    &__all-gigs {
+      @include wrapper;
+      margin-top: 50px;
+
+      &__title {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+
+        &__number {
+          font-size: 20px;
+          font-weight: $font-weight-normal;
+          padding: 4px 0 0 10px;
+        }
+        &__text {
+          font-size: 28px;
+          font-weight: $font-weight-semibold;
+        }
+        &__filter {
+          margin-left: auto;
+        }
+      }
+    }
+    &__topic {
+      @include wrapper;
+      margin-top: 50px;
+    }
+    &__join-us {
+      @include wrapper;
+      margin-top: 70px;
+      margin-bottom: 50px;
+
+      &__container {
+        background-image: url("/assets/images/join-us.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        position: relative;
+        @media (max-width: $mobile-max-width) {
+          height: 200px;
+          background-image: unset;
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 450px;
+          @media (max-width: $mobile-max-width) {
+            width: 100%;
+          }
+
+          span {
+            margin-bottom: 60px;
+            @media (max-width: $mobile-max-width) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

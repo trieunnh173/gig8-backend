@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>slide-left-arrow-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="17" cy="16" r="12"></circle>
+        <filter x="-145.8%" y="-104.2%" width="391.7%" height="391.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="UI-style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Style-Guide-Copy" transform="translate(-1068.000000, -3944.000000)">
+            <g id="big-left-arrow-icon" transform="translate(1068.000000, 3944.000000)">
+                <g id="side-left-arrow-icon">
+                    <g transform="translate(24.500000, 24.500000) scale(-1, 1) translate(-24.500000, -24.500000) translate(8.000000, 8.000000)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#5F6C7B" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <path d="M16.8864361,0.57421875 C25.6852642,0.57421875 32.9899517,7.86230469 32.9899517,16.6611328 C32.9899517,25.4765625 25.7018657,32.7646484 16.9030376,32.7646484 C8.1042095,32.7646484 0.799521998,25.4765625 0.799521998,16.6611328 C0.799521998,7.86230469 8.08760794,0.57421875 16.8864361,0.57421875 Z M15.3424907,8.609375 C14.7946392,8.09472656 14.0143657,8.06152344 13.5163189,8.55957031 C13.018272,9.05761719 12.9518657,9.92089844 13.4831157,10.4023438 L13.4831157,10.4023438 L20.190147,16.6777344 L13.4831157,22.9863281 C12.9850689,23.4511719 12.9684673,24.28125 13.4997173,24.8125 C13.9645611,25.2607422 14.8444439,25.2109375 15.3424907,24.7626953 L15.3424907,24.7626953 L22.1491314,18.3544922 C23.0954204,17.4580078 23.0954204,15.9140625 22.1491314,15.0175781 L22.1491314,15.0175781 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

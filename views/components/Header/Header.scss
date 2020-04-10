@@ -21,9 +21,11 @@
     flex: 0 1 auto;
     &__trigger {
       cursor: pointer;
+      width: 24px;
     }
     &__logo {
       cursor: pointer;
+      height: 34px;
       @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
         height: 24px;
       }
@@ -41,13 +43,22 @@
       height: 80px;
       align-items: center;
       margin-left: auto;
+
       &__user {
         .dropdown-item {
           padding-top: 10px;
           padding-bottom: 10px;
         }
         &__toggle {
+          cursor: pointer;
           padding-bottom: 4px;
+          &:hover {
+            svg {
+              g {
+                fill: #3da9fc;
+              }
+            }
+          }
         }
       }
     }
@@ -71,6 +82,7 @@
     height: 60px;
     width: 100%;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
     &.-show {
       display: block;
       -webkit-animation-name: fadeIn;
@@ -86,19 +98,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       &__row {
         display: flex;
         padding: 0 18px;
         height: 60px;
         position: relative;
         align-items: center;
+        cursor: pointer;
         &:hover {
           .header__categories__wrapper__row__name {
             color: #5dbdf9 !important;
           }
         }
+
         &__icon {
-          height: 24px;
+          width: 24px;
           margin-right: 5px;
         }
         &__popup {
@@ -119,6 +134,7 @@
             padding: 20px;
             position: relative;
             border-right: 1px solid #efefef;
+
             .triangle {
               position: absolute;
               top: -10px;
@@ -144,6 +160,7 @@
             display: flex;
             flex-direction: column;
             padding: 20px;
+
             &__item {
               text-align: left;
               padding: 10px 0;
@@ -199,21 +216,5 @@
   }
   100% {
     opacity: 1;
-  }
-}
-
-@media (min-width: $desktop-min-width) {
-  .mobile {
-    display: none !important;
-  }
-}
-@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-  .desktop {
-    display: none !important;
-  }
-}
-@media (max-width: $mobile-max-width) {
-  .desktop {
-    display: none !important;
   }
 }

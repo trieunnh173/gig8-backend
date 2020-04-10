@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>start-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="17.562 21 16.0905 14.3409474 21 9.86273684 14.5281 9.27821053 12 3 9.4719 9.27821053 3 9.86273684 7.9095 14.3409474 6.438 21 12 17.4682105"></polygon>
+    </defs>
+    <g id="UI-style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Style-Guide-Copy" transform="translate(-815.000000, -3997.000000)">
+            <g id="start-icon" transform="translate(815.000000, 3997.000000)">
+                <g>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask-Copy-4" fill="#F5B322" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
